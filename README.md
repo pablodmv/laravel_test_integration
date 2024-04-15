@@ -14,10 +14,11 @@ Before getting started, make sure you have the following installed:
 
 1. Clone this repository.
 2. Install the dependencies by running `composer install` and `npm install`.
-3. Rename the `.env.example` file to `.env` and update the database credentials.
-4. Generate the application key by running `php artisan key:generate`.
-5. Migrate the database by running `php artisan migrate`.
-6. Seed the database with initial data by running `php artisan db:seed`.
+3. Build assets by running `npm run build`.
+4. Rename the `.env.example` file to `.env` and update the database credentials.
+5. Generate the application key by running `php artisan key:generate`.
+6. Migrate the database by running `php artisan migrate`.
+7. Seed the database with initial data by running `php artisan db:seed`.
 
 ## Usage
 
