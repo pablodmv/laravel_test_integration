@@ -1,133 +1,627 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Markup Template</title>
+    <!-- Font Icons -->
+    <link media="all" rel="stylesheet" href="css/fonts/icomoon/icomoon.css">
+    <link media="all" rel="stylesheet" href="css/fonts/roxine-font-icon/roxine-font.css">
+    <link media="all" rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
+    <!-- Vendor -->
+    <link media="all" rel="stylesheet" href="vendor/owl-carousel/dist/assets/owl.carousel.min.css">
+    <link media="all" rel="stylesheet" href="vendor/owl-carousel/dist/assets/owl.theme.default.min.css">
+    <link media="all" rel="stylesheet" href="vendor/animate/animate.css">
+    <link media="all" rel="stylesheet" href="vendor/rateyo/jquery.rateyo.css">
+    <link media="all" rel="stylesheet" href="vendor/bootstrap-datepicker/css/bootstrap-datepicker.css">
+    <link media="all" rel="stylesheet" href="vendor/fancyBox/source/jquery.fancybox.css">
+    <link media="all" rel="stylesheet" href="vendor/fancyBox/source/helpers/jquery.fancybox-thumbs.css">
+    <!-- Bootstrap 4 -->
+    <link media="all" rel="stylesheet" href="css/bootstrap.css">
+    <!-- Rev Slider -->
+    <link rel="stylesheet" type="text/css" href="vendor/rev-slider/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="vendor/rev-slider/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="vendor/rev-slider/revolution/css/navigation.css">
+    <!-- Theme CSS -->
+    <link media="all" rel="stylesheet" href="css/main.css">
+    <!-- Custom CSS -->
+    {{-- <link media="all" rel="stylesheet" href="css/custom.css"> --}}
+</head>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
+<body>
+    <!-- main wrapper -->
+    <div id="wrapper">
+        <div class="page-wrapper">
+            <!-- header of the page -->
+            <header class="fixed-top main-header header-white transparent" id="waituk-main-header">
+                <div id="nav-section">
+                    <div class="bottom-header container-fluid mega-menus" id="mega-menus">
+                        <nav class="navbar navbar-toggleable-md no-border-radius no-margin mega-menu-multiple" id="navbar-inner-container">
+                            <form action="mega-menu-5.html" id="top-search" class="no-margin top-search">
+                                <div class="form-group no-margin">
+                                    <input class="form-control no-border" id="search_term" name="search_term" placeholder="Type & Press Enter" type="text">
+                                </div>
+                            </form>
+                            <button type="button" class="navbar-toggler navbar-toggler-left" data-toggle="collapse" data-target="#mega-menu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <a class="navbar-brand mr-auto m-sm-auto" href="index.html"> <img src="img/logo.svg" alt="roxine"> <img src="img/logo-dark.svg" alt="roxine"> </a>
+                            <div class="collapse navbar-collapse flex-row-reverse" id="mega-menu">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown" data-animation="fadeIn">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home"> Home </a>
+                                        <ul class="dropdown-menu no-border-radius">
+                                            <li><a href="index.html"> Creative Agency </a></li>
+                                            <li><a href="design-studio.html"> Design Studio </a></li>
+                                            <li><a href="digital-agency.html"> Digital Agency </a></li>
+                                            <li><a href="construction.html"> Construction </a></li>
+                                            <li><a href="corporate.html"> Corporate </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown" data-animation="fadeIn">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home"> Features </a>
+                                        <ul class="dropdown-menu  no-border-radius">
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a class="sub-marker" href="#">Header Styles <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="header-v1.html"> Header v1 </a></li>
+                                                    <li><a href="header-v2.html"> Header v2 </a></li>
+                                                    <li><a href="header-v3.html"> Header v3 </a></li>
+                                                    <li><a href="header-v4.html"> Header v4 </a></li>
+                                                    <li><a href="header-v5.html"> Header v5 </a></li>
+                                                    <li><a href="header-v6.html"> Header v6 </a></li>
+                                                    <li><a href="header-v7.html"> Header v7 </a></li>
+                                                    <li><a href="header-v8.html"> Header v8 </a></li>
+                                                    <li><a href="header-v9.html"> Header v9 </a></li>
+                                                    <li><a href="header-v10.html"> Header v10 </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a class="sub-marker" href="#"> Mega Menu <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="features-simple-mega.html"> Simple Mega </a></li>
+                                                    <li><a href="features-with-image.html"> With Image</a></li>
+                                                    <li><a href="features-with-video.html"> With Video </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a class="sub-marker" href="#">Footer Styles <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="footer-v1.html"> Footer v1 </a></li>
+                                                    <li><a href="footer-v2.html"> Footer v2 </a></li>
+                                                    <li><a href="footer-v3.html"> Footer v3 </a></li>
+                                                    <li><a href="footer-v4.html"> Footer v4 </a></li>
+                                                    <li><a href="footer-v5.html"> Footer v5 </a></li>
+                                                    <li><a href="footer-v6.html"> Footer v6 </a></li>
+                                                    <li><a href="footer-v7.html"> Footer v7 </a></li>
+                                                    <li><a href="footer-v8.html"> Footer v8 </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a href="#" class="sub-marker">Rev Slider <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="premium-slides.html"> Premium Slides </a></li>
+                                                    <li><a href="slider-left-aligned.html"> Left Aligned </a></li>
+                                                    <li><a href="slider-center-aligned.html"> Center Aligned </a></li>
+                                                    <li><a href="slider-right-aligned.html"> Right Aligned </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a href="#" class="sub-marker"> Side Panel <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="features-left-overlay.html"> Left Overlay </a></li>
+                                                    <li><a href="features-right-overlay.html"> Right Overlay </a></li>
+                                                    <li><a href="features-left-push.html"> Left Push </a></li>
+                                                    <li><a href="features-right-push.html"> Right Push </a></li>
+                                                    <li><a href="features-side-panel-colored.html"> Colored </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a href="#" class="sub-marker"> Page Banners <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="features-slide-bg.html"> Slide BG </a></li>
+                                                    <li><a href="features-image-bg.html"> Image BG </a></li>
+                                                    <li><a href="features-parallax-bg.html"> Parallax BG </a></li>
+                                                    <li><a href="features-video-bg.html"> Video BG </a></li>
+                                                    <li><a href="features-google-map-bg.html"> Google Map </a></li>
+                                                    <li><a href="features-colored-bg.html"> Colored BG </a></li>
+                                                    <li><a href="features-light-bg.html"> Light BG </a></li>
+                                                    <li><a href="features-dark-bg.html"> Dark BG </a></li>
+                                                    <li><a href="features-fullscreen-bg.html"> Full Screen </a></li>
+                                                    <li><a href="features-contained-bg.html"> Contained </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a href="#" class="sub-marker"> Banner Titles <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="features-left-aligned-title.html"> Left Aligned </a></li>
+                                                    <li><a href="features-right-aligned-title.html"> Right Aligned </a></li>
+                                                    <li><a href="features-center-aligned-title.html"> Center Aligned </a></li>
+                                                    <li><a href="features-title-with-breadcrumb.html"> With Breadcrumbs </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a href="#" class="sub-marker"> User Profiles <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="signin.html"> Sign In </a></li>
+                                                    <li><a href="signup.html"> Sign Up </a></li>
+                                                    <li><a href="forgot-password.html"> Forgot Password </a></li>
+                                                    <li><a href="new-password.html"> New Password </a></li>
+                                                    <li><a href="confirm-email.html"> Email Confirmation </a></li>
+                                                    <li><a href="registration-success.html"> Registration Success </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-right dropdown-parent">
+                                                <a href="#" class="sub-marker"> Site Search <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="features-header-search.html"> Header Search </a></li>
+                                                    <li><a href="features-transparent-bg-search.html"> Transparent BG </a></li>
+                                                    <li><a href="features-light-bg-search.html"> Light BG </a></li>
+                                                    <li><a href="features-dark-bg-search.html"> Dark BG </a></li>
+                                                    <li><a href="features-colored-bg-search.html"> Colored BG </a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown" data-animation="fadeIn">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home"> Portfolio </a>
+                                        <ul class="dropdown-menu no-border-radius">
+                                            <li class="dropdown dropdown-left dropdown-parent">
+                                                <a class="sub-marker" href="#"> No Sidebar <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="portfolio-no-sidebar-2-col.html"> 2 Column </a></li>
+                                                    <li><a href="portfolio-no-sidebar-3-col.html"> 3 Column </a></li>
+                                                    <li><a href="portfolio-no-sidebar-4-col.html"> 4 Column </a></li>
+                                                    <li><a href="portfolio-no-sidebar-6-col.html"> 6 Column </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-left dropdown-parent">
+                                                <a class="sub-marker" href="#"> Left Sidebar <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="portfolio-left-sidebar-2-col.html"> 2 Column </a></li>
+                                                    <li><a href="portfolio-left-sidebar-3-col.html"> 3 Column </a></li>
+                                                    <li><a href="portfolio-left-sidebar-4-col.html"> 4 Column </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown dropdown-left dropdown-parent">
+                                                <a class="sub-marker" href="#"> Right Sidebar <i class="icon-ios-more icn-right"></i></a>
+                                                <ul class="dropdown-menu dropdown-menu-indent-sm no-border-radius">
+                                                    <li><a href="portfolio-right-sidebar-2-col.html"> 2 Column </a></li>
+                                                    <li><a href="portfolio-right-sidebar-3-col.html"> 3 Column </a></li>
+                                                    <li><a href="portfolio-right-sidebar-4-col.html"> 4 Column </a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="portfolio-masonary.html"> Masonary </a></li>
+                                            <li><a href="portfolio-full-width.html">  Full Width </a></li>
+                                            <li><a href="portfolio-full-width-spaced.html">  Full Spaced</a></li>
+                                            <li><a href="portfolio-3-col.html"> Boxed </a></li>
+                                            <li><a href="portfolio-single.html"> Single V1 </a></li>
+                                            <li><a href="portfolio-single-v2.html">  Single V2 </a></li>
+                                            <li><a href="portfolio-single-v3.html"> Single V3 </a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown dropdown-full-width-g" data-animation="fadeIn">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" data-title="Pages">Elements </a>
+                                        <div class="dropdown-menu no-border-radius no-padding" data-adjust="2">
+                                            <div class="row row-autoheight no-gutters">
+                                                <div class="col-lg-3 col-autoheight clearfix">
+                                                    <div class="widget-default clearfix">
+                                                        <ul class="s-list s-list-pl s-list-mb-10 no-padding">
+                                                            <li><a href="element-accordions.html"><i class="icon-server"></i> ACCORDIONS </a></li>
+                                                            <li><a href="element-animations.html"><i class="icon-magic"></i> ANIMATIONS </a></li>
+                                                            <li><a href="element-buttons.html"><i class="icon-link"></i> BUTTONS </a></li>
+                                                            <li><a href="element-carousels.html"><i class="icon-heart"></i> CAROUSEL </a></li>
+                                                            <li><a href="element-tabs.html"><i class="icon-tasks"></i> TABS </a></li>
+                                                            <li><a href="element-columns.html"><i class="icon-th-large"></i> COLUMNS </a></li>
+                                                            <li><a href="element-counters.html"><i class="icon-time"></i> COUNTERS </a></li>
+                                                            <li><a href="element-data-tables.html"><i class="icon-table"></i> DATA TABLES </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-autoheight clearfix">
+                                                    <div class="widget-default clearfix">
+                                                        <ul class="s-list s-list-pl s-list-mb-10 no-padding">
+                                                            <li><a href="element-date-time-pickers.html"><i class="icon-calendar-11"></i> DATE & TIME PICKERS </a></li>
+                                                            <li><a href="element-dividers.html"><i class="icon-indent-right"></i> DIVIDERS </a></li>
+                                                            <li><a href="element-icon-boxes.html"><i class="icon-lightbulb"></i> ICON BOXES </a></li>
+                                                            <li><a href="element-galleries.html"><i class="icon-picture"></i> GALLERIES </a></li>
+                                                            <li><a href="element-header-styles.html"><i class="icon-edit-pen-1"></i> HEADER STYLES </a></li>
+                                                            <li><a href="element-icon-lists.html"><i class="icon-list-alt"></i> ICON LISTS </a></li>
+                                                            <li><a href="element-labels.html"><i class="icon-plus-circle"></i> LABELS </a></li>
+                                                            <li><a href="element-lightbox.html"><i class="icon-resize-full"></i> LIGHTBOX </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-autoheight clearfix">
+                                                    <div class="widget-default clearfix">
+                                                        <ul class="s-list s-list-pl s-list-mb-10 no-padding">
+                                                            <li><a href="element-google-maps.html"><i class="icon-mark-map"></i> MAPS </a></li>
+                                                            <li><a href="element-media-embed.html"><i class="icon-play"></i> MEDIA EMBEDS </a></li>
+                                                            <li><a href="element-modal-boxes.html"><i class="icon-move"></i> MODAL BOXES </a></li>
+                                                            <li><a href="element-paginations.html"><i class="icon-cogs"></i> PAGINATIONS </a></li>
+                                                            <li><a href="element-progressbar.html"><i class="icon-progress-2"></i> PROGRESS BARS </a></li>
+                                                            <li><a href="element-range-sliders.html"><i class="icon-arrow-move"></i> RANGE SLIDER </a></li>
+                                                            <li><a href="element-star-ratings.html"><i class="icon-star-6"></i> STAR RATINGS </a></li>
+                                                            <li><a href="element-pricing-boxes.html"><i class="icon-dollar-2"></i> PRICING BOXES </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-autoheight clearfix">
+                                                    <div class="widget-default clearfix">
+                                                        <ul class="s-list s-list-pl s-list-mb-10 no-padding">
+                                                            <li><a href="element-blockquotes.html"><i class="icon-quote-left"></i> BLOCKQUOTES </a></li>
+                                                            <li><a href="font-icons.html"><i class="icon-laptop-6"></i> FONT ICONS </a></li>
+                                                            <li><a href="element-sections.html"><i class="icon-folder-open"></i> SECTIONS </a></li>
+                                                            <li><a href="element-social-icons.html"><i class="icon-facebook"></i> SOCIAL ICONS </a></li>
+                                                            <li><a href="element-select-pickers.html"><i class="icon-select"></i> SELECT PICKER </a></li>
+                                                            <li><a href="element-select-boxes.html"><i class="icon-columns"></i> SELECT BOXES </a></li>
+                                                            <li><a href="team.html"><i class="icon-select"></i> TEAM BLOCK </a></li>
+                                                            <li><a href="about.html"><i class="icon-columns"></i> ABOUT BLOCK </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="about.html"> About </a>
+                                    </li>
+                                    <li>
+                                        <a href="team.html"> Team </a>
+                                    </li>
+                                    <li class="dropdown right-dropdown" data-animation="fadeIn">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="index.html" data-title="Home"> Blog </a>
+                                        <ul class="dropdown-menu no-border-radius">
+                                        	<li><a href="blog-one-col.html"> Blog One Column </a></li>
+                                            <li><a href="blog-two-col.html"> Blog Two Column </a></li>
+                                            <li><a href="blog-three-col.html"> Blog Three Column </a></li>
+                                            <li><a href="blog-left-sidebar.html"> Blog Left Sidebar </a></li>
+                                            <li><a href="blog-right-sidebar.html"> Blog Right Sidebar </a></li>
+                                            <li><a href="blog-masonary.html"> Masonary </a></li>
+                                            <li><a href="blog-full-width.html"> Full Width </a></li>
+                                            <li><a href="blog-single.html"> Blog Single </a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html"> Contact </a>
+                                    </li>
+                                    <li class="dropdown cart-list margin-0-sm">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);"><span class="hidden-lg-up"> Shopping Cart </span><i class="custom-icon-cart m-marker"></i></a>
+                                        <div class="dropdown-menu-container">
+                                            <div class="dropdown-menu no-border-radius col-lg-1 col-md-4 col-sm-4">
+                                                <h4> Shopping Cart </h4>
+                                                <ul class="s-list no-padding">
+                                                    <li class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-5 col">
+                                                            <div class="img">
+                                                                <a href="#"><img src="img/img-02.jpg" alt="image description"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8 col-sm-7 col">
+                                                            <h6> <a href="#"><strong>Product 1 </strong></a><span class="text-muted float-right"> x 1 </span></h6>
+                                                            <h6> $199 </h6>
+                                                        </div>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-5 col">
+                                                            <div class="img">
+                                                                <a href="#"><img src="img/img-02.jpg" alt="image description"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8 col-sm-7 col">
+                                                            <h6> <a href="#"><strong>Product 2 </strong></a><span class="text-muted float-right"> x 2 </span></h6>
+                                                            <h6> $199 </h6>
+                                                        </div>
+                                                    </li>
+                                                    <li class="divider margin-bottom-1"></li>
+                                                    <li class="row">
+                                                        <div class="col-lg-4 col-md-4 col-sm-5 col">
+                                                            <h2> Total </h2>
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8 col-sm-7 col">
+                                                            <h2 class="text-right"> $3300 </h2>
+                                                        </div>
+                                                    </li>
+                                                    <li><a href="#" class="btn btn-sm btn-block btn-secondary btn-mina btn-mina-rip-br"> View Cart </a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="navbar-pos-search">
+                                <a href="#" class="x-search x-search-trigger navbar-link"><i class="custom-icon-search"></i></a>
+                                <a href="#" class="x-search icon-close-round navbar-link"><i class="icon-line-cross"></i></a>
+                            </div>
+                        </nav>
+                    </div>
                 </div>
-            @endif
-
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
+            </header>
+            <!--/header of the page -->
+            <main>
+                <!-- visual/banner of the page -->
+                <div class="banner banner-home">
+                    <!-- revolution slider starts -->
+                    <div id="rev_slider_279_1_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="restaurant-header" style="margin:0px auto;background-color:#fff;padding:0px;margin-top:0px;margin-bottom:0px;">
+                        <div id="rev_slider_70_1" class="rev_slider fullscreenabanner" style="display:none;" data-version="5.1.4">
+                            <ul>
+                                <li class="slider-color-schema-dark" data-index="rs-2" data-transition="fade" data-slotamount="7" data-easein="default" data-easeout="default" data-masterspeed="1000" data-rotate="0" data-saveperformance="off" data-title="Slide" data-description="">
+                                    <!-- main image for revolution slider -->
+                                    <img src="img/big-11.jpg" alt="image description" data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-bgfit="cover" data-no-retina>
+                                    <div class="tp-caption tp-shape tp-shapewrapper" 
+                                    id="slide-1699-layer-10" 
+                                    data-x="['center','center','center','center']" 
+                                    data-hoffset="['0','0','0','0']" 
+                                    data-y="['middle','middle','middle','middle']" 
+                                    data-voffset="['0','0','0','0']" 
+                                    data-width="full"
+                                    data-height="full"
+                                    data-whitespace="nowrap"
+                                    data-type="shape" 
+                                    data-basealign="slide" 
+                                    data-responsive_offset="on" 
+                                    data-responsive="off"
+                                    data-frames='[{"from":"y:0;sX:1;sY:1;opacity:0;","speed":2500,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":300,"to":"opacity:0;","ease":"nothing"}]'
+                                    data-textAlign="['left','left','left','left']"
+                                    data-paddingtop="[0,0,0,0]"
+                                    data-paddingright="[0,0,0,0]"
+                                    data-paddingbottom="[0,0,0,0]"
+                                    data-paddingleft="[0,0,0,0]"
+                                    style="background-color:rgba(0, 0, 0, 0.56);"> </div>
+                                    <div class="slider-sub-title text-white tp-caption tp-resizeme rs-parallaxlevel-0" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['top','top','middle','middle']" data-voffset="['225','100','10','20']" data-width="['1200','960','720','540']" data-textalign="left" data-fontsize="['30','28','24','20']" data-lineheight="['72','62','50','50']" data-letterspacing="5" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;" data-mask_out="x:inherit;y:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-paddingright="[25,25,25,25]" data-paddingleft="[25,25,25,25]">
+                                    BUSINESS. LAW. FINANCE.
+                                    </div>
+                                    <div class="slider-main-title text-white tp-caption tp-resizeme rs-parallaxlevel-1" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['top','top','middle','middle']" data-voffset="['250','150','50','50']" data-width="['1200','960','720','540']" data-textalign="left" data-fontsize="['100','88','64','48']" data-fontweight="900" data-letterspacing="['25','10','5','0']" data-lineheight="['184','100','72','60']" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;" data-mask_out="x:inherit;y:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-paddingright="[25,25,25,25]" data-paddingleft="[25,25,25,25]">
+                                    JOB DONE
+                                    </div>
+                                    <div class="slider-text text-white tp-caption tp-resizeme rs-parallaxlevel-2" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['top','top','middle','middle']" data-voffset="['450','230','110','110']" data-width="['600','555','555','480']" data-textalign="left" data-fontsize="['14','14','14','14']" data-lineheight="['30','30','22','22']" data-fontweight="400" data-height="none" data-whitespace="normal" data-transform_idle="o:1;" data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_in="x:0px;y:0px;" data-mask_out="x:inherit;y:inherit;" data-start="1000" data-splitin="none" data-splitout="none" data-responsive_offset="on" data-paddingright="[25,25,25,25]" data-paddingleft="[25,25,25,25]">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    </div>
+                                    <div class="tp-caption rev-btn  rs-parallaxlevel-10" id="slide-163-layer-1" data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['300','60','240','220']" data-width="none" data-height="none" data-whitespace="nowrap" data-transform_idle="o:1;" data-transform_hover="o:1;rX:0;rY:0;rZ:0;z:0;s:300;e:Power3.easeOut;" data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" data-transform_out="y:[175%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_out="x:inherit;y:inherit;" data-start="1250" data-splitin="none" data-splitout="none" data-actions='[{"event":"click","action":"jumptoslide","slide":"rs-164","delay":""}]' data-responsive_offset="on" data-paddingtop="[0,0,0,0]" data-paddingright="[25,25,25,25]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[25,25,25,25]">
+                                        <a class="btn btn-primary has-radius-small" href="#">EXPLORE WORK</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
+                <!--/visual/banner of the page -->
+                <!-- main content wrapper -->
+                <div class="content-wrapper">
+                    <section class="content-block">
+                        <div class="container">
+                            <div class="block-heading bottom-space">
+                                <h3 class="block-top-heading">THE LIFE SIZE</h3>
+                                <h2 class="block-main-heading">BRAND STORY</h2>
+                                <span class="block-sub-heading">View multiple content block layouts under features section.</span>
+                                <div class="divider"><img src="img/divider.png" alt="images description"></div>
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="bottom-space-small-only">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magnaal qua. Ut enim ad minim veniam, quis nostrud exercitation ulla mco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culp a qui officia deserunt mollit anim id est laborum. Sed ut per spiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium, totam rem aperiam, eaque ip </p>
+                                        <div class="btn-container top-m-space">
+                                            <a href="#" class="btn btn-trans-gray">VIEW PROJECTS</a>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
+                                <div class="col-md-6">
+                                    <div class="bottom-s-space">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <ul class="content-links">
+                                                <li><a href="#"> WEB & INTERACTIVE DESIGN</a></li>
+                                                <li><a href="#">CONTENT MANAGEMENT</a></li>
+                                                <li><a href="#">WEB APPLICATIONS</a></li>
+                                                <li><a href="#">SOFTWARE DEVELOPMENT</a></li>
+                                                <li><a href="#">ECOMMERCE SOLUTIONS</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="content-links">
+                                                <li><a href="#">DATABASE DESIGN</a></li>
+                                                <li><a href="#">TECHNICAL DOCUMENTATION</a></li>
+                                                <li><a href="#">SOFTWARE ARCHITECTURE</a></li>
+                                                <li><a href="#">SEARCH OPTIMIZATION</a></li>
+                                                <li><a href="#">WEB PROMOTIONS</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
+                        </div>
+                    </section>
+                    <section class="content-block quotation-block quotation-block-v7 black-overlay-6 parallax" data-stellar-background-ratio="0.55">
+                        <div class="container">
+                            <div class="inner-wrapper">
+                                <div class="block-heading text-right">
+                                    <h3 class="block-top-heading text-white">CORPORATE VENTURES</h3>
+                                    <h2 class="block-main-heading text-white">NO COMPROMISE</h2>
+                                    <span class="block-sub-heading text-white">We really love what we do & our work on every project truly reflects that.</span>
+                                    <div class="divider"><img src="img/divider-white.png" alt="images description"></div>
                                 </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
+                        </div>
+                    </section>
+                    <section class="content-block">
+                        <div class="container">
+                            <h3 class="text-center element-heading pb-5">Corporate Tabs</h3>
+                            <div class="tab-container tab-black tab-center-container">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs tab-button-nav" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#tab13" role="tab">Concept</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tab14" role="tab">Design</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tab15" role="tab">Develop</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#tab16" role="tab">Deploy</a>
+                                    </li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="top-m-space tab-content">
+                                    <div class="tab-pane fade show active" id="tab13" role="tabpanel">
+                                        <p>Indulgence announcing uncommonly met she continuing two unpleasing terminated. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. Share walls stuff think but the arise guest. Course suffer to do he sussex it window advice. Yet matter enable misery end extent common men should. Her indulgence but assistance favourable cultivated everything collecting. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab14" role="tabpanel">
+                                        <p>Indulgence announcing uncommonly met she continuing two unpleasing terminated. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. Share walls stuff think but the arise guest. Course suffer to do he sussex it window advice. Yet matter enable misery end extent common men should. Her indulgence but assistance favourable cultivated everything collecting. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in.</p>
+                                        <p>Indulgence announcing uncommonly met she continuing two unpleasing terminated. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. Share walls stuff think but the arise guest. Course suffer to do he sussex it window advice. Yet matter enable misery end extent common men should. Her indulgence but assistance favourable cultivated everything collecting. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab15" role="tabpanel">
+                                        <p>Indulgence announcing uncommonly met she continuing two unpleasing terminated. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. Share walls stuff think but the arise guest. Course suffer to do he sussex it window advice. Yet matter enable misery end extent common men should. Her indulgence but assistance favourable cultivated everything collecting. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. he arise guest. Course suffer to do he sussex it window advice. Yet matter enable misery end extent common men should. Her indulgence but assistance favourable cultivated everything collecting. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="tab16" role="tabpanel">
+                                        <p>Indulgence announcing uncommonly met she continuing two unpleasing terminated. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. Share walls stuff think but the arise guest. Course suffer to do he sussex it window advice. Yet matter enable misery end extent common men should. Her indulgence but assistance favourable cultivated everything collecting. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in.</p>
+                                    </div>
                                 </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!--/main content wrapper -->
+            </main>
+        </div>
+        <!-- footer of the pagse -->
+        <footer class="footer footer-v1 footer-v2">
+            <div class="content-block footer-main pb-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <div class="footer-logo mt-2">
+                                <img src="img/logo-dark.svg" alt="image-description">
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="waituk_newsletter-form newsletter-v1 mt-2">
+                                <form action="#" method="post">
+                                    <fieldset class="clearfix">
+                                        <div class="form-group input-holder">
+                                            <input type="email" class="form-control" placeholder="Email Address">
+                                            <button type="submit" class="btn"><i class="fa fa-send"></i></button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="my-4">
+                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <h4>Services</h4>
+                            <div class="footer-nav">
+                                <ul>
+                                    <li><a href="#">Web Design</a></li>
+                                    <li><a href="#">Art Design</a></li>
+                                    <li><a href="#">Consultation</a></li>
+                                    <li><a href="#">Wordpress</a></li>
+                                    <li><a href="#">Custom Work</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <h4>Company</h4>
+                            <div class="footer-nav">
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Legal</a></li>
+                                    <li><a href="#">Policies</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <h4>In the News</h4>
+                            <div class="footer-nav">
+                                <ul>
+                                    <li><a href="#">Press</a></li>
+                                    <li><a href="#">Women</a></li>
+                                    <li><a href="#">Sales</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm sm:text-left">
-                        &nbsp;
-                    </div>
-
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 pb-3">
+                            <p>Copyright 2016 - Waituk </p>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="social-network with-text">
+                                <li><a href="#"><span class="icon-facebook"></span></a></li>
+                                <li><a href="#"><span class="icon-twitter"></span></a></li>
+                                <li><a href="#"><span class="icon-google-plus"></span></a></li>
+                                <li><a href="#"><span class="icon-pinterest"></span></a></li>
+                                <li><a href="#"><span class="icon-dribbble"></span></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+            </div>
+        </footer>
+        <!--/footer of the page -->
+    </div>
+     <!-- search form wrapper -->
+    <div class="search-form-wrapper">
+        <a href="#" class="nav-search-link close"><span class="icon-android-close"></span></a>
+        <div class="holder">
+            <input type="search" class="form-control form-control-v1" placeholder="Enter Your Search">
+             <button type="submit"><span class="custom-icon-search"></span></button>
         </div>
-    </body>
+    </div>
+
+    <a href="#" class="section-scroll" id="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- jquery library -->
+    <script src="vendor/jquery/jquery-2.1.4.min.js"></script>
+    <!-- external scripts -->
+    <script src="vendor/tether/dist/js/tether.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/stellar/jquery.stellar.min.js"></script>
+    <script src="vendor/isotope/javascripts/isotope.pkgd.min.js"></script>
+    <script src="vendor/isotope/javascripts/packery-mode.pkgd.js"></script>
+    <script src="vendor/owl-carousel/dist/owl.carousel.js"></script>
+    <script src="vendor/waypoint/waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js"></script>
+    <script src="vendor/fancyBox/source/jquery.fancybox.pack.js"></script>
+    <script src="vendor/fancyBox/source/helpers/jquery.fancybox-thumbs.js"></script>
+    <script src="vendor/image-stretcher-master/image-stretcher.js"></script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/rateyo/jquery.rateyo.js"></script>
+    <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="vendor/bootstrap-slider-master/src/js/bootstrap-slider.js"></script>
+    <script src="js/mega-menu.js"></script>
+    <!-- custom jquery script -->
+    <script src="js/jquery.main.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="vendor/rev-slider/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <!-- SNOW ADD ON -->
+    <script type="text/javascript" src="vendor/rev-slider/revolution-addons/snow/revolution.addon.snow.min.js"></script>
+        <!-- revolutions slider script -->
+    <script src="js/revolution.js"></script>
+</body>
+
 </html>
