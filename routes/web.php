@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\indexController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ImgLocationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [indexController::class, 'getImage'])->name('index');
+
+// Ruta para mostrar el formulario de creación
+Route::get('/img_location/create', [ImgLocationController::class, 'create'])->name('img_location.create');
+
+// Ruta para almacenar el registro enviado desde el formulario
+Route::post('/img_location', [ImgLocationController::class, 'store'])->name('img_location.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
