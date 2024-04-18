@@ -1,8 +1,11 @@
 <!-- resources/views/img_location/create.blade.php -->
 
-@extends('layouts.app') <!-- Asume que tienes un layout base -->
+@extends('adminlte::page')
 
+@section('title', 'Agregar imagen')
 @section('content')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.10.0/toastify.js" integrity="sha512-mwSdINqQLRATPXGW3x8ce1DFtv+qX8V1sq1ciyGdOyqtFGbU6oU2a+o3ol5QcoXfiX9pI6gZOq9i3k14AQL0UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -10,7 +13,7 @@
                 <div class="card-header">Agregar Registro</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('img_location.store') }}">
+                    <form method="POST" action="{{ route('img_location.store') }}" enctype="multipart/form-data">
                         @csrf
 
                         <div class="form-group">
@@ -40,6 +43,10 @@
                         <div class="form-group">
                             <label for="tags">Etiquetas:</label>
                             <input type="text" name="tags" id="tags" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Imagen:</label>
+                            <input type="file" name="image" id="image" class="form-control-file" accept="image/*" required>
                         </div>
 
                         <button type="submit" class="btn btn-primary">Guardar</button>

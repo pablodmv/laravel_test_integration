@@ -34,4 +34,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::middleware('auth')->group(function () {
+   // Ruta para mostrar el formulario de creación
+Route::get('/img_location/create', [ImgLocationController::class, 'create'])->name('img_location.create');
+
+// Ruta para almacenar el registro enviado desde el formulario
+Route::post('/img_location', [ImgLocationController::class, 'store'])->name('img_location.store');
+
+});
+
 require __DIR__.'/auth.php';
