@@ -16,7 +16,7 @@ use App\Http\Controllers\ImgLocationController;
 |
 */
 
-Route::get('/', [indexController::class, 'getImage'])->name('index');
+Route::get('/', [indexController::class, 'index'])->name('index');
 
 // Ruta para mostrar el formulario de creación
 Route::get('/img_location/create', [ImgLocationController::class, 'create'])->name('img_location.create');

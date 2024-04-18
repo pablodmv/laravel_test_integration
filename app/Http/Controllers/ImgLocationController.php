@@ -20,7 +20,7 @@ class ImgLocationController extends Controller
     public function create()
     {
        // $imgLocationEnum = collect((new \ReflectionClass(ImgLocationEnum::class))->getConstants()); 
-       $imgLocationEnum = "hola";
+       $imgLocationEnum = ImgLocationEnum::PORTADA1;
         return view('img_location.create', compact('imgLocationEnum'));
     }
 
@@ -46,17 +46,17 @@ class ImgLocationController extends Controller
            
              // Get the image file from the request
             $image = $request->file('image');
-            $now = Carbon::now();
-            $formattedTimestamp = $now->format('d_m_Y');
-            $filename = $formattedTimestamp . '_' . $image->getClientOriginalName();
+            $now = date('dmYHis');;
+            $filename = $now . '_' . $image->getClientOriginalName();
     
             $imagePath = $request->file('image')->storeAs('public/img', $filename);
+            $url = Storage::url($imagePath);
     
             
 
             imgLocation::create([
                 'location' => $request->location,
-                'url' => $imagePath,
+                'url' => $url,
                 'description' => $request->description,
                 'category' => $request->category,
                 'tags' => $request->tags,
